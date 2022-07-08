@@ -62,3 +62,43 @@ Jump
 
 ---
 
+
+## Inheritence
+Copying attributes and behaviours of a class into another class
+
+# Constructors
+A special method which returns object of a class. It is the same name as of it's class.
+ - Default Constructor
+ - Parameterized Constructor
+
+## Types of variables (based on scope)
+ - instance 
+ - static
+ - local
+
+## Access Modifiers
+ - public
+ - private
+ - default
+ - protected
+
+## Interface 
+A class-like body which specifies which methods that must be implemented by a class.
+
+## Abstract class
+A class whose object cannot be created.
+
+## Overloading 
+Method in a class with same name but different parameters
+
+## Overriding
+Modifiying a method which was inherited by a parent class
+
+### ?
+## Generics
+## Lambda Expressions
+## Methods of the 'Object' class
+## Collection Framework
+## Stream API
+## Exception Handling
+## File IO
