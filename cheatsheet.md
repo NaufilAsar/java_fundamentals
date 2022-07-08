@@ -45,17 +45,20 @@ An Array is collection of multiple variables/constants/objects.
 
 ## Control Structures
 
-- Selection
-- 1. if-else statements
-- 2. switch case
+Selection
+- if-else statements
+- switch case
 
-- Iteration / Looping
-- 1. while
-- 2. for
-- 3. do-while
-- 4. for-each
+Iteration / Looping
+- while
+- for
+- -while
+- for-each
 
-- Jump
-- 1. break
-- 2. continue
-- 3. return
+Jump
+- break
+- continue
+- return
+
+---
+
