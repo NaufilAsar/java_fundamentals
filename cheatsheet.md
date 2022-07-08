@@ -66,7 +66,7 @@ Jump
 ## Inheritence
 Copying attributes and behaviours of a class into another class
 
-# Constructors
+## Constructors
 A special method which returns object of a class. It is the same name as of it's class.
  - Default Constructor
  - Parameterized Constructor
