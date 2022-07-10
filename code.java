@@ -1,4 +1,5 @@
 // A class is a plan of how we want to represent our own custom datatype. it does nothing except showing how Objects of a class would be
+
 // Declaring a class:
 public class Main // a class which is public must be in a file such that filename and classname are the same
 {
