@@ -75,7 +75,7 @@ public class Main // a class which is public must be in a file such that filenam
     int number = 10;
     while(number != 0) { // execute all statements within brackets if number is not equal to 0 repeatedly.
         System.out.println(number);
-        number++; // increase value of number by 1.
+        number--; // decrease value of number by 1.
     }
     // for
     for (int i = 0; i <= 10 ; i++ ) { // create a new int 'i'. loop until i is less than 10. increase value of i by 1 after every loop.
@@ -86,7 +86,7 @@ public class Main // a class which is public must be in a file such that filenam
     number = 10;
     do {
         System.out.println(number);
-        number++;
+        number--;
     } while(number != 0);
     // for-each // simplified for loop 
     int [] intArray = { 10, 20, 30, 40, 50 };
