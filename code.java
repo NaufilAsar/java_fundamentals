@@ -152,3 +152,114 @@ class Student extends Person {
     // 'walk' from Person class.
     int roll_no;
 }
+
+// Abstract class:
+// Abstraction is a way to hide implementation details and only knowing what is absolutely necessary
+// abstract classes and interfaces help acheive abstraction.
+abstract class Vehicle {
+    String engineType;
+    abstract void startVehicle(); // only necessary information is made known,
+    // implementation details will be given later in a class which extends this abstract class
+}
+
+class Car extends Vehicle {
+    @Override
+    void startVehicle(){
+        System.out.println("Car Started."); // implementation given later
+    }
+}
+
+// while we can use abstract classes for abstraction, we cannot have multiple inheritence in it.
+// Java does not allow multiple inheritence in classes. But it allows multiple inheritence in interfaces.
+// interface is a class-like body which just like abstract classes, hold abstract methods
+interface Addition {
+    int add(int a, int b);
+}
+interface Subtraction {
+    int minus(int a, int b);
+}
+class Calculate implements Addition, Subtraction {
+    // when we implement an interface, it is mandatory to define the implementation
+    // just like the abstract classes.. which we later on defined in the sub class.
+    @Override
+    int add(int a, int b){
+        return a+b;
+    }
+    @Override
+    int minus(int a, int b){
+        return a-b;
+    }
+}
+
+
+// Generics
+// Generics includes:
+// 1. Generic class
+// 2. Generic interface
+// 3. Generic methods
+
+// Generic class means a class which uses a genral datatype.. meaning a datatype which represents all datatypes
+// For e.g. By defining a class with generic datatype <T> we say that this class needs to define a type while creating object.
+//      This type can be any Non-Primitive datatype like 'Float', 'Integer', or even any Class.
+
+// Consider a scenario where you wish to design a Calculator.
+// for every possible combination of float, int, long, double and other number datatypes you would have to design separate methods.
+
+// Like so:
+// int sum(int a, int b) {
+    // return a+b;
+// }
+// float (float a, float b){
+    // return a+b;
+// }
+
+// we can make a generic Class which can use same methods and member datatypes for both of these float and int.
+// we use angle brackets '<' and '>' to say that this class uses generic datatypes.
+// The generic datatype below is named 'T', however you can name it anything you wish.
+// To use multiple generic datatypes in single class, we define it as: <T1, T2> 
+class MyNumber<T> {
+    T number; // same as saying 'int number' or 'float number'.
+    void printNumber() {
+        System.out.println(this.number);
+    }
+}
+
+
+// Generic interface is nothing but an interface which uses generic datatype ( just like generic class but in interface )
+interface MyNewNumber<T> {
+    T add(T a, T b); // same as 'int add(int a, int b);'
+    T minus(T a, T b); // you can add as many methods you like
+}
+
+// Generic methods are methods that use Generic datatype. ( again same as Generic classes and interfaces )
+class Example {
+    // define the generic datatype before the return type of method
+    public static <E> void printAnything(E inputValue){ // we also take a 'E' input parameter
+        System.out.println(E);
+    } 
+    // this was same as:
+    public static void printSomething(int someValue){
+        System.out.println(someValue);
+    }
+}
+
+// Bounded Generics:
+// Bounded generics just means to restrict the types allowed in a generic datatype.
+// Earlier by saying <T> as generic type we were allowing possibly all kinds of datatypes to be called 'T'. 
+// This can produce unwanted results if an object is created by using a generic datatype which was not intended for it.
+// for e.g. if someone creates our earlier MyNumber<T> class object with a 'Void' or 'Boolean' datatype, 
+// we wont be able to do Calculations such as addition, subtraction.
+class A {
+class MyBoundedClass <T extends A> { // now only A or subclasses of A are allowed while making object of this class
+    
+}
+class Example2 {
+    MyBoundedClass<A> obj = new MyBoundedClass<>(); // allowed
+    // MyBoundedClass<Integer> obj2 = new MyBoundedClass<>(); // not allowed
+}
+
+
+// Lambda Expressions
+// it is a way to shorten methods
+
+
