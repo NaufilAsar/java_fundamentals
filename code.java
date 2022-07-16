@@ -2,6 +2,7 @@
 
 // Declaring a class:
 public class Main // a class which is public must be in a file such that filename and classname are the same
+// i.e. if class called 'Main' is public, it should be in a file called 'Main.java'
 {
     // main method is an entry point for the program. this is were the code is
     // executed if we execute the file.
