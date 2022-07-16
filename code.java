@@ -6,8 +6,7 @@ public class Main // a class which is public must be in a file such that filenam
 {
     // main method is an entry point for the program. this is were the code is
     // executed if we execute the file.
-    // String[] args is to add extra data while executing -eg: 'java filename.java
-    // Harry'
+    // String[] args is to add extra data while executing -eg: 'java filename.java Harry'
     // where 'Harry is passed as an argument and can be used inside the program.'
     public static void main(String[] args) {
         // Object is an occurence of class. If a class is a plan to build a building,
@@ -36,10 +35,10 @@ public class Main // a class which is public must be in a file such that filenam
 
         // Constants: a variable whose value cannot be changed once assigned.
         final double PI = 3.14;
-        // we generally name constant variables in Uppercase
+        // we generally name constant variables in Uppercase separating each word with an underscore.
         final int SCREEN_SIZE = 566;
 
-        // Array
+        // Array - is a group of variables stored in contigious memory locations under a single variable name
         int[] arr = new int[3]; // make an empty array
         int[] arr2 = { 1, 2, 3, 4, 5, 6 }; // make an array with values
 
@@ -47,22 +46,21 @@ public class Main // a class which is public must be in a file such that filenam
         System.out.println(arr[2]); // print third element
 
         // Control Flow Structures:
-        // Alter the default order/ sequence of code execution.. (i.e from line number 1
-        // to end)
+        // Alter the default order/sequence of code execution.. (i.e usual execution from line number 1 to end is changed by using these)
 
         // 1. Selection
         // if-else statements
         if (3 < 4) { // supply a condition which retuens a boolean here
-            System.out.println("3 is less than 4."); // this is executed only if condition is true
+            System.out.println("3 is less than 4."); // this (code inside the curly brackets) is executed only if condition is true
         }
         // switch case // similar to multiple switch statements
-        char letter = 'C';
+        char letter = 'C'; // switched can use any primitive data types like int, char, etc.. unlike if-else which only use boolean.
         switch(letter){
             case 'A':
                 System.out.println("The letter is A");
                 break; // if this case is true then exit the switch statement, or else it will execute every case..
             case 'B':
-                System.out.println("The letter is B");
+                System.out.println("The letter is B"); // if we dont add break statements, it executes every next case after the first true case.
                 break;
             case 'C':
                 System.out.println("The letter is C");
@@ -262,5 +260,17 @@ class Example2 {
 
 // Lambda Expressions
 // it is a way to shorten methods
+// if we say a method:
+//     int sum(int a, int b) {
+//          return a+b;
+//     }
+// then we can make it shorter using lambda expression syntax:
+//     (int a, int b) -> a+b; // same method as above
+//     here we have a hyphen (-) and an angle bracket forming an arrow (->)
+//     left side of the arrow are the parameters of method.. it is not compulsory to say the datatype here..
+//     i.e: (a,b) -> a+b;
+//     is also valid syntax.
+//     and the right hand side is the return value.
+    
 
 
